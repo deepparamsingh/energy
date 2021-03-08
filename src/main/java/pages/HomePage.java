@@ -3,6 +3,7 @@ package pages;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.SendKeysAction;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,7 +17,8 @@ public class HomePage extends Testbase {
 	
 	
 
-	@FindBy(xpath = "//a[@id='submit_postalcode']")
+	@FindBy(xpath = "//div[@class='field-wrap']//div[@class='main-input']//a[@id='submit_postalcode']")
+	
 	WebElement compare;
 	
 	
@@ -34,18 +36,14 @@ public class HomePage extends Testbase {
 	
 	public ElectricityPage validatePostcode() throws Throwable
 	{
-//		postCodeinput.sendKeys("2000, BARANGAROO, NSW");
-//		Thread.sleep(2000);
-//		postCodeinput.sendKeys(Keys.ENTER);
-//		return new ElectricityPage();
-		
-		//postcodeInput.sendKeys("2000, BARANGAROO, NSW");
 		sendKeys(driver, postCodeinput, 5, "2000, BARANGAROO, NSW");
-		clickOn(driver, compare, 5);
-		//Thread.sleep(2000);
-		//postcodeInput.sendKeys(Keys.ENTER);
+		//clickOn(driver, compare, 5);
+		sendKeys(Keys.ENTER);
 		return new  ElectricityPage();
 	}
+
+
+	
 	
 
 	

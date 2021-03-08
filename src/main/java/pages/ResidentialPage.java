@@ -25,8 +25,8 @@ public class ResidentialPage extends Testbase {
 	
 	public SolarPage validatePropertySelect() throws Throwable
 	{
-		Thread.sleep(3000);
-		propertyType.click();
+	    Thread.sleep(5000);
+		clickOn(driver, propertyType, 5);
 		return new SolarPage();
 	
 	}

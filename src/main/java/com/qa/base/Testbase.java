@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -77,7 +78,10 @@ public class Testbase {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
 	}
-	
+	public void sendKeys(Keys enter) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

@@ -10,7 +10,7 @@ public class ElectricityPage extends Testbase{
 	
 		
 		//PageFactory
-		@FindBy(xpath = "//span[@class='rdl-label electriciy-gas' and contains(text(),'Electricity')]")
+		@FindBy(xpath = "//span[contains(text(),'Electricity & Gas')]")
 		WebElement elec;
 
 			
@@ -26,8 +26,8 @@ public class ElectricityPage extends Testbase{
 		
 		public ResidentialPage validateElecSelect() throws Throwable
 		{
-			Thread.sleep(1000);
-			elec.click();
+			//Thread.sleep(3000);
+			clickOn(driver, elec, 5);
 			return new ResidentialPage();
 		
 		}
