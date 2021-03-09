@@ -34,12 +34,13 @@ public class LifeSupportPage extends Testbase {
 	
 	public PopUpPage validateLifeSuport() throws Throwable
 	{
-		
-		lifeSupportNo.click();
-		movinNo.click();
+		clickOn(driver, lifeSupportNo, 5);
+		//lifeSupportNo.click();
+		clickOn(driver, movinNo, 5);
+		//movinNo.click();
 		//concessionNo.click();
-	
-		buttonMovinPropertyPage.click();
+	      clickOn(driver, buttonMovinPropertyPage, 5);
+		//buttonMovinPropertyPage.click();
 //		Thread.sleep(5000);
 		return new PopUpPage();
 	

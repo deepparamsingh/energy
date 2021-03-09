@@ -49,10 +49,10 @@ public class PopUpPageTest extends Testbase {
    }
    
 	@Test(priority=1)
-	public void validatelifesupportTest() throws Throwable 
+	public void validateCredentialsTest() throws Throwable 
 	{
 	
-		planlisting=popUp.validatePopUp();
+		planlisting=popUp.validateCredentials();
     
 	}
 	

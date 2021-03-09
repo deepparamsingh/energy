@@ -37,6 +37,7 @@ public class HomePage extends Testbase {
 	public ElectricityPage validatePostcode() throws Throwable
 	{
 		sendKeys(driver, postCodeinput, 5, "2000, BARANGAROO, NSW");
+		Thread.sleep(2000);
 		//clickOn(driver, compare, 5);
 		sendKeys(Keys.ENTER);
 		return new  ElectricityPage();

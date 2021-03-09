@@ -25,7 +25,7 @@ public class SolarPage extends Testbase {
 	
 	public LifeSupportPage validateSolarSelect() throws Throwable
 	{
-		//Thread.sleep(3000);
+		Thread.sleep(2000);
 		solarno.click();
 		return new LifeSupportPage();
 	

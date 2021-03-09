@@ -26,7 +26,7 @@ public class ElectricityPage extends Testbase{
 		
 		public ResidentialPage validateElecSelect() throws Throwable
 		{
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			clickOn(driver, elec, 5);
 			return new ResidentialPage();
 		

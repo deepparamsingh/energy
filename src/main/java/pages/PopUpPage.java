@@ -6,23 +6,23 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.qa.base.Testbase;
 
+
 public class PopUpPage extends Testbase {
 
 
 	@FindBy(xpath = "//input[@id='firstname']")
-	WebElement lifeSupportNo;
+	WebElement firstname;
 	
-	
+
 	@FindBy(xpath = "//input[@id='email']")
-	WebElement movinNo;
+	WebElement email;
 	
 	
-	@FindBy(xpath = "")
-	WebElement concessionNo;
+	@FindBy(xpath = "//input[@id='phone']")
+	WebElement phone;
 	
-	
-	@FindBy(xpath = "//button[@class='single-form-next movingpropertynext']")
-	WebElement buttonMovinPropertyPage;
+	@FindBy(xpath = "//button[@id='submitcustomer_detail']")
+	WebElement popUpSubmit;
 	
 	
 	public PopUpPage()
@@ -32,14 +32,24 @@ public class PopUpPage extends Testbase {
 	
 	
 	//Actions
-	
-	public PlanListingPage validatePopUp() throws Throwable
+	public PlanListingPage validateCredentials() throws Throwable
 	{
-		return null;
+		firstname.sendKeys(prop.getProperty("username"));
+		email.sendKeys(prop.getProperty("email"));
+		phone.sendKeys(prop.getProperty("phone"));
+		popUpSubmit.click();
+	    return new PlanListingPage();
 		
-		
-	
 	}
+	
+//	public AddOnsPage validateApplyButton() throws Throwable
+//	{
+//		Thread.sleep(1000);
+//		applyButton.isDisplayed();
+//		applyButton.click();
+//		return new AddOnsPage();
+//		
+//	}
 	
 	
 }
