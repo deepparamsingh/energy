@@ -34,10 +34,14 @@ public class PopUpPage extends Testbase {
 	//Actions
 	public PlanListingPage validateCredentials() throws Throwable
 	{
-		firstname.sendKeys(prop.getProperty("username"));
-		email.sendKeys(prop.getProperty("email"));
-		phone.sendKeys(prop.getProperty("phone"));
-		popUpSubmit.click();
+		sendKeys(driver, firstname, 5, prop.getProperty("username"));
+		//firstname.sendKeys(prop.getProperty("username"));
+		sendKeys(driver, email, 5, prop.getProperty("email"));
+		//email.sendKeys(prop.getProperty("email"));
+		sendKeys(driver, phone, 5, prop.getProperty("phone"));
+		//phone.sendKeys(prop.getProperty("phone"));
+		//popUpSubmit.click();
+		clickOn(driver, popUpSubmit, 5);
 	    return new PlanListingPage();
 		
 	}

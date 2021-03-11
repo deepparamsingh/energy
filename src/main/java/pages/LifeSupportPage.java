@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,6 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import com.qa.base.Testbase;
 
 public class LifeSupportPage extends Testbase {
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
 
 	@FindBy(xpath = "//div[contains(@class,'close-it boxit no-box')]//span[@class='rdl-label'][contains(text(),'No')]")
 	WebElement lifeSupportNo;
@@ -35,13 +39,9 @@ public class LifeSupportPage extends Testbase {
 	public PopUpPage validateLifeSuport() throws Throwable
 	{
 		clickOn(driver, lifeSupportNo, 5);
-		//lifeSupportNo.click();
 		clickOn(driver, movinNo, 5);
-		//movinNo.click();
-		//concessionNo.click();
-	      clickOn(driver, buttonMovinPropertyPage, 5);
-		//buttonMovinPropertyPage.click();
-//		Thread.sleep(5000);
+		js.executeScript("arguments[0].scrollIntoView();", buttonMovinPropertyPage);
+	    clickOn(driver, buttonMovinPropertyPage, 5);
 		return new PopUpPage();
 	
 	}
