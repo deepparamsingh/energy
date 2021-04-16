@@ -34,7 +34,7 @@ public class PlanListingPage extends Testbase {
 	{
 		Thread.sleep(3000);
 		js.executeScript("arguments[0].scrollIntoView();", plan);
-		clickOn(driver, plan, 5);
+		clickOn(driver, plan, 15);
 		System.out.println("plan selected");
 		Thread.sleep(3000);
 		//clickOn(driver, popUp, 5);

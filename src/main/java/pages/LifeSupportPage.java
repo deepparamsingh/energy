@@ -28,6 +28,11 @@ public class LifeSupportPage extends Testbase {
 	WebElement buttonMovinPropertyPage;
 	
 	
+	@FindBy(xpath = "//input[@id='signup_checkbox_input']")
+	WebElement lifesupportcheckbox;
+	
+	
+	
 	public LifeSupportPage()
 	{
 		PageFactory.initElements(driver, this);
@@ -42,6 +47,7 @@ public class LifeSupportPage extends Testbase {
 		clickOn(driver, movinNo, 5);
 		js.executeScript("arguments[0].scrollIntoView();", concessionNo);
 		clickOn(driver, concessionNo, 5);
+		clickOn(driver, lifesupportcheckbox, 5);
 	    clickOn(driver, buttonMovinPropertyPage, 5);
 	    
 	    System.out.println("LifeSupport click");

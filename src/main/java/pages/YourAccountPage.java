@@ -13,18 +13,6 @@ public class YourAccountPage extends Testbase{
 
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-//	@FindBy(xpath = "//select[@id='updatetitle']")
-//	WebElement selectTitle;
-	
-//	@FindBy(id = "updatetitle")
-//	WebElement selectTitle;
-	
-//	WebElement selectText=driver.findElement(By.xpath("//select[@id='updatetitle']"));
-	
-	WebElement selectText=driver.findElement(By.cssSelector("#updatetitle"));
-	
-	
-	
 	@FindBy(xpath = "//input[@id='lastname']")
 	WebElement lastname;
 	
@@ -34,9 +22,13 @@ public class YourAccountPage extends Testbase{
 	@FindBy(xpath = "//span[normalize-space()='Energy']")
 	WebElement energy_link;
 	
+	@FindBy(xpath = "//select[@id='updatetitle']")
+	WebElement title;
+	@FindBy(xpath = "//option[@value='Mr']")
+	WebElement mr;
 	
-	
-	
+	@FindBy(xpath = "//button[@id='acoountdetails-next']")
+	WebElement accountSubmitBtn;
 	
 	
 	
@@ -50,15 +42,12 @@ public class YourAccountPage extends Testbase{
 	{		
 		js.executeScript("arguments[0].scrollIntoView();", energy_link);
 		Thread.sleep(3000);
-		selectText.click();
-//		Select selectNameTitle = new Select(selectText);
-		//Thread.sleep(3000);
-		//selectNameTitle.selectByVisibleText("Mr");	
-		sendKeys(driver, lastname, 15, "deep singh");
-		sendKeys(driver, updatedob, 15, "25041995");	
-//		lastname.sendKeys("deep singh");
-//		updatedob.sendKeys("25041995");
-		System.out.println("Title selected");
+		clickOn(driver, title, 15);
+		clickOn(driver, mr, 10);	
+		sendKeys(driver, lastname, 15, "deep singh");		
+		sendKeys(driver, updatedob, 15, "25 04 1995");	
+		clickOn(driver, accountSubmitBtn, 5);
+		System.out.println("Your Account details filled");
 	return new YourConnectionPage();
 }
 
