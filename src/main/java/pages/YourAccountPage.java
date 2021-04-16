@@ -5,12 +5,15 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.base.Testbase;
 
 public class YourAccountPage extends Testbase{
 
+	WebDriverWait wait= new WebDriverWait(driver, 15);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@FindBy(xpath = "//input[@id='lastname']")
@@ -42,7 +45,9 @@ public class YourAccountPage extends Testbase{
 	{		
 		js.executeScript("arguments[0].scrollIntoView();", energy_link);
 		Thread.sleep(3000);
-		clickOn(driver, title, 15);
+		WebElement titleElement= wait.until(ExpectedConditions.elementToBeClickable(title));
+		titleElement.click();
+		//clickOn(driver, title, 15);
 		clickOn(driver, mr, 10);	
 		sendKeys(driver, lastname, 15, "deep singh");		
 		sendKeys(driver, updatedob, 15, "25 04 1995");	
