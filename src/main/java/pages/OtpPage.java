@@ -52,7 +52,7 @@ public class OtpPage extends Testbase {
 		sendKeys(driver, otpCode, 5, "2608");
 		clickOn(driver, otpSubmit, 5);
 		System.out.println("Your OTP details filled");
-		Thread.sleep(4000);
+		Thread.sleep(10000);
 		String confirmationElecText=confirmationElec.getText();
 		String confirmationGasText= confirmationGas.getText();
 		System.out.println("Your Electricity Confirmation is :"+ confirmationElecText);
