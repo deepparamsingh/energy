@@ -11,7 +11,7 @@ import com.qa.base.Testbase;
 
 public class YourConnectionPage extends Testbase {
 
-	WebDriverWait wait= new WebDriverWait(driver, 15);
+	WebDriverWait wait= new WebDriverWait(driver, 25);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@FindBy(xpath = "//input[@id='searchaddress']")
