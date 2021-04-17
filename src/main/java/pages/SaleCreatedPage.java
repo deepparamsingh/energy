@@ -36,7 +36,7 @@ public class SaleCreatedPage extends Testbase {
 	//Actions
 	public SaleCreatedPage validateSaleCreatedPage() throws Throwable
 	{		
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		//js.executeScript("arguments[0].scrollIntoView();", otpcheckBox1);
 		String confirmationElecText=confirmationElec.getText();
 		String confirmationGasText= confirmationGas.getText();
