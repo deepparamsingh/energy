@@ -34,6 +34,7 @@ public class PopUpPage extends Testbase {
 	//Actions
 	public PlanListingPage validateCredentials() throws Throwable
 	{
+		Thread.sleep(2000);
 		sendKeys(driver, firstname, 5, prop.getProperty("username"));
 		//firstname.sendKeys(prop.getProperty("username"));
 		sendKeys(driver, email, 5, prop.getProperty("email"));

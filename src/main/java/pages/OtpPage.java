@@ -25,6 +25,13 @@ public class OtpPage extends Testbase {
 	
 	@FindBy(xpath = "//button[@class='single-form-next confirmotp']")
 	WebElement otpSubmit;
+	
+	@FindBy(xpath = "//div[@class='plan-confrim-tab2 plan-confrim-tab2_1']")
+	WebElement confirmationElec;	
+			
+	@FindBy(xpath = "//div[@class='plan-confrim-tab2 plan-confrim-tab2_2']")
+	WebElement confirmationGas;
+	
 		
 	
 	
@@ -44,9 +51,14 @@ public class OtpPage extends Testbase {
 		clickOn(driver, otpcheckBox2, 5);
 		sendKeys(driver, otpCode, 5, "2608");
 		clickOn(driver, otpSubmit, 5);
+		System.out.println("Your OTP details filled");
+		Thread.sleep(4000);
+		String confirmationElecText=confirmationElec.getText();
+		String confirmationGasText= confirmationGas.getText();
+		System.out.println("Your Electricity Confirmation is :"+ confirmationElecText);
+		System.out.println("Your Gas Confirmation is :"+ confirmationGasText);		
+		System.out.println("Thank you!!! for using our services.");
 		
-		
-		System.out.println("Your debit card details filled");
 		return new SaleCreatedPage();
 }
 

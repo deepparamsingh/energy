@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcase.DebitCardDetailsPageTest">
+      <class name="com.qa.testcase.OtpPageTest">
         <methods>
-          <include name="validateDebitCardDetailsPageTest"/>
+          <include name="validateOtpPageTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.testcase.DebitCardDetailsPageTest -->
+      </class> <!-- com.qa.testcase.OtpPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
