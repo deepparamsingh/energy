@@ -47,7 +47,7 @@ public class LifeSupportPage extends Testbase {
 		clickOn(driver, movinNo, 5);
 		js.executeScript("arguments[0].scrollIntoView();", concessionNo);
 		clickOn(driver, concessionNo, 5);
-		clickOn(driver, lifesupportcheckbox, 5);
+		//clickOn(driver, lifesupportcheckbox, 5);
 	    clickOn(driver, buttonMovinPropertyPage, 5);
 	    
 	    System.out.println("LifeSupport click");

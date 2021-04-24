@@ -38,7 +38,7 @@ public class PlanListingPage extends Testbase {
 		System.out.println("plan selected");
 		Thread.sleep(3000);
 		//clickOn(driver, popUp, 5);
-		popUp.click();
+//		popUp.click();
 		System.out.println("Plan popup clicked");
 	return new YourAccountPage();
 		

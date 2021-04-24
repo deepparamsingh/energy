@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.qa.testcase.DoHaveConcessionTest"/>
+      <class name="com.qa.testcase.HomePageTest"/>
+      <class name="com.qa.testcase.ElectricityPageTest"/>
+      <class name="com.qa.testcase.ResidentialPageTest"/>
+      <class name="com.qa.testcase.PopUpPageTest"/>
+      <class name="com.qa.testcase.LifeSupportTest"/>
+      <class name="com.qa.testcase.OtpPageTest"/>
+      <class name="com.qa.testcase.YourIdentificationPageTest"/>
+      <class name="com.qa.testcase.PlanListingPageTest"/>
+      <class name="com.qa.testcase.SolarTest"/>
+      <class name="com.qa.testcase.DebitCardDetailsPageTest"/>
+      <class name="com.qa.testcase.YourConnectionPageTest"/>
+      <class name="com.qa.testcase.YourAccountPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

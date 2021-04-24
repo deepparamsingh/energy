@@ -35,6 +35,7 @@ public class HomePage extends Testbase {
 	
 	public ElectricityPage validatePostcode() throws Throwable
 	{
+		Thread.sleep(3000);
 		sendKeys(driver, postCodeinput, 2, "2000, BARANGAROO, NSW");
 		System.out.println("post code entered");
 		Thread.sleep(2000);
